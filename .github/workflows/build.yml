@@ -1,0 +1,24 @@
+name: Build Geode mod (Windows)
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          sdk: latest
+          cli: latest
+          build-config: Release
+          target: Win64
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: predictive-input-buffer
+          path: ${{ steps.build.outputs.build-output }}

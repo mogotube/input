@@ -1,0 +1,20 @@
+{
+	"geode": "5.0.0",
+	"gd": {
+		"win": "2.2081"
+	},
+	"id": "kepi.predictive-input-buffer",
+	"name": "Predictive Input Buffer",
+	"version": "v1.0.0",
+	"developer": "kepi",
+	"description": "Buffer de inputs en ticks de fisica (240 TPS) con etapas ciclables por F6 y consola en vivo.",
+	"tags": ["gameplay", "developer"],
+	"settings": {
+		"log-presses": {
+			"type": "bool",
+			"name": "Loguear cada press",
+			"description": "Muestra en la consola cada click guardado en el buffer.",
+			"default": true
+		}
+	}
+}
