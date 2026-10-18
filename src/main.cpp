@@ -92,8 +92,8 @@ namespace {
 class $modify(IBGameLayer, GJBaseGameLayer) {
 	// Cada vez que el juego procesa un paso de fisica: avanzamos el contador y
 	// aplicamos los inputs que ya vencieron.
-	void processCommands(float dt) {
-		GJBaseGameLayer::processCommands(dt);
+	void processCommands(float dt, bool isHalfTick, bool isLastTick) {
+		GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
 
 		g_step++;
 		g_lastStepTime = Clock::now();
