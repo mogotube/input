@@ -18,6 +18,7 @@
 #include <Geode/modify/CCKeyboardDispatcher.hpp>
 
 #include <chrono>
+#include <cmath>
 #include <deque>
 
 using namespace geode::prelude;
